@@ -1,0 +1,6 @@
+NODE test_0
+SQL >
+
+    SELECT * FROM nyc_taxi where passenger_count > 6
+
+

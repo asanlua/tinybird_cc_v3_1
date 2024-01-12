@@ -1,0 +1,15 @@
+NODE nyc_taxi_pipe_3136_0
+SQL >
+
+    SELECT
+        toStartOfHour(tpep_pickup_datetime) AS hour,
+        countState(passenger_count) AS passengers
+    FROM nyc_taxi
+    GROUP BY hour
+
+TYPE materialized
+DATASOURCE nyc_taxi_pipe_3136_0_mv
+ENGINE "AggregatingMergeTree"
+ENGINE_PARTITION_KEY "toYYYYMM(hour)"
+ENGINE_SORTING_KEY "hour"
+

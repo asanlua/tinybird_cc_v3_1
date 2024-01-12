@@ -1,0 +1,8 @@
+TOKEN "untitled_pipe_2713_endpoint_read_5948" READ
+
+NODE untitled_pipe_2713_0
+SQL >
+
+    SELECT count() FROM taxi_time where passenger_count=5 
+
+

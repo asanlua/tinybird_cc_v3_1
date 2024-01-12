@@ -1,0 +1,7 @@
+NODE nyc_taxi_pipe_3136_0_mv_pipe_9048_0
+SQL >
+
+    SELECT hour, countMerge(passengers) FROM nyc_taxi_pipe_3136_0_mv
+    group by hour
+
+
