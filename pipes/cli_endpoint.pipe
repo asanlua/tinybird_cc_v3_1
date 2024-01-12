@@ -5,7 +5,7 @@ SQL >
 
     %
         SELECT vendorid, avg(passenger_count) as average FROM nyc_taxi 
-        WHERE trip_distance={{Float32(trip_distance_param, 10)}}
+        WHERE trip_distance={{Float32(trip_distance_param, 10)}} and passenger_count = 3
         group by vendorid
 
 
